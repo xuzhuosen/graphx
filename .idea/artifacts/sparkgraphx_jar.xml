@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sparkgraphx:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sparkgraphx_jar</output-path>
+    <root id="archive" name="sparkgraphx.jar">
+      <element id="module-output" name="sparkgraphx" />
+    </root>
+  </artifact>
+</component>
