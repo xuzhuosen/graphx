@@ -5,7 +5,7 @@ import java.util
 import org.json4s.{Formats, NoTypeHints}
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import java.util.Properties
-
+import org.apache.hadoop.hbase.AuthUtil
 import cn.edu.nju.config.HbaseAttribute
 import cn.edu.nju.po.UserCartoonRate
 import org.json4s.jackson.Serialization
@@ -25,7 +25,7 @@ object DataConsumer {
     props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     val consumer = new KafkaConsumer[String, String](props)
-    consumer.subscribe(util.Arrays.asList("userCartoon"))
+    consumer.subscribe(util.Arrays.asList("zhuosen"))
     val records = consumer.poll(Duration.ofMillis(1000)).asScala
     while (records.nonEmpty) {
       for (record <- records) {
