@@ -26,13 +26,14 @@ object DataConsumer {
     props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
     val consumer = new KafkaConsumer[String, String](props)
     consumer.subscribe(util.Arrays.asList("zhuosen"))
-    val records = consumer.poll(Duration.ofMillis(1000)).asScala
+    var records = consumer.poll(Duration.ofMillis(1000)).asScala
     while (records.nonEmpty) {
       for (record <- records) {
         implicit val formats: AnyRef with Formats = Serialization.formats(NoTypeHints)
         val userCartoon =  parse(record.value).extract[UserCartoonRate]
         HbaseUtil.insertRow(HbaseAttribute.userCartoonTableName, userCartoon.id, HbaseAttribute.columnFamilyOfUserCartoon, userCartoon.cid, userCartoon.score)
       }
+      records = consumer.poll(Duration.ofMillis(1000)).asScala
       consumer.commitSync()
     }
   }

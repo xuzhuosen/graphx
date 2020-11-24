@@ -27,7 +27,6 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/org/apache/hbase/hbase-client/2.2.6/hbase-client-2.2.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/com/fasterxml/jackson/module/jackson-module-scala_2.12/2.10.0/jackson-module-scala_2.12-2.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/org/apache/hbase/hbase-common/2.2.6/hbase-common-2.2.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.8/jackson-module-jaxb-annotations-2.9.8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/org/json4s/json4s-scalap_2.10/3.6.7/json4s-scalap_2.10-3.6.7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../maven_repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.8/jackson-jaxrs-json-provider-2.9.8.jar" path-in-jar="/" />

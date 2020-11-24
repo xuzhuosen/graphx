@@ -19,6 +19,8 @@ object GraphAnalyse {
   def main(args: Array[String]): Unit={
     //test()
     //(uid, cid, score)
+//    val s = System.getProperty("java.classpath")
+//    println(s"System property"+s)
     val command = args(0)
     if(command.contains("consumer")) {
       if(args.length>=2)

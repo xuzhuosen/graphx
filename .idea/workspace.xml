@@ -7,12 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcb2583c-2b0b-43b6-a59a-1a69c9d82d57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sparkgraphx_jar4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sparkgraphx_jar5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sparkgraphx_jar3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sparkgraphx_jar3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sparkgraphx_jar4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar3/sparkgraphx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar3/sparkgraphx.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar3/sparkgraphx.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar4/sparkgraphx.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar5/sparkgraphx.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sparkgraphx_jar5/sparkgraphx.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/DataConsumer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/DataConsumer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/GraphAnalyse.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/GraphAnalyse.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/HbaseUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/HbaseUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/cn/edu/nju/ww.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nju/DataConsumer$.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nju/DataConsumer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/nju/GraphAnalyse$.class" beforeDir="false" />
@@ -60,6 +66,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ka1qQr6QtnPNYA5qVKJES6GIaZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -70,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41379312" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -192,7 +201,7 @@
       <workItem from="1605944517797" duration="879000" />
       <workItem from="1605945451505" duration="17744000" />
       <workItem from="1606054344225" duration="4672000" />
-      <workItem from="1606108147919" duration="42698000" />
+      <workItem from="1606108147919" duration="52178000" />
     </task>
     <servers />
   </component>
@@ -212,10 +221,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1606046059517" />
-    <state x="413" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606218668543">
+    <state x="413" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606229050122">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1606218668543" />
+    <state x="413" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1606229050122" />
     <state x="283" y="110" key="FileChooserDialogImpl" timestamp="1606219655386">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -236,10 +245,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="661" height="72" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1606134952590" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1606219700350">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1606232763196">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1606219700350" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1606232763196" />
     <state x="363" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1606108150069">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

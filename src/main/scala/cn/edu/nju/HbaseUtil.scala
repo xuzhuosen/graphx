@@ -10,7 +10,7 @@ import scala.collection.mutable.ArrayBuffer
 
 object HbaseUtil {
   val conf: Configuration = HBaseConfiguration.create()
-  conf.set("hbase.rootdir", "hdfs://namenode:9000/hbase")
+  //conf.set("hbase.rootdir", "hdfs://namenode:9000/hbase")
   val connection: Connection = ConnectionFactory.createConnection(conf)
   val admin: Admin = connection.getAdmin
 
@@ -76,7 +76,7 @@ object HbaseUtil {
       val uid = bsToString(result.getRow)
       val cidScoreArray = ArrayBuffer[(String, Int)]()
       val cols = result.getFamilyMap(columnFamily.getBytes())
-      cols.forEach((c, v) => {cidScoreArray.append((bsToString(c), bsToString(v).toInt))})
+      cols.forEach((c, v) => {cidScoreArray.append((bsToString(c), bsToString(v).toFloat.toInt))})
       ret.append((uid, cidScoreArray.toArray))
       result = scanner.next()
     }
