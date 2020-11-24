@@ -1,3 +1,3 @@
 package cn.edu.nju.po
 
-case class UserCartoonRate(uid: String, cid: String, score: String) extends Serializable
+case class UserCartoonRate(id: String, cid: String, score: String) extends Serializable

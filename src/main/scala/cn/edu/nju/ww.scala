@@ -16,7 +16,7 @@ object ww{
                |""".stripMargin
     implicit val formats: AnyRef with Formats = Serialization.formats(NoTypeHints)
     val userCartoon =  parse(s4).extract[UserCartoonRate]
-    println(userCartoon.uid)
+    println(userCartoon.id)
     println(userCartoon.cid)
     println(userCartoon.score)
     val sw = "你好"

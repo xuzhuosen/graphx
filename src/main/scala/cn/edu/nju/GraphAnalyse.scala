@@ -28,7 +28,8 @@ object GraphAnalyse {
     }
     else if(command.contains("analyse")){
       //[(uid, Array[(cid, score)])]
-      val arrayMsg: Array[(String, Array[(String, Int)])] = HbaseUtil.scanTableColumn(HbaseAttribute.userCartoonTableName, HbaseAttribute.columnFamilyOfUserCartoon)
+      val arrayMsg: Array[(String, Array[(String, Int)])] = HbaseUtil
+        .scanTableColumn(HbaseAttribute.userCartoonTableName, HbaseAttribute.columnFamilyOfUserCartoon)
       arrayMsg.foreach( a => {print(s"arrayMsg:  uid:${a._1}  cid:${a._2}")})
       val graph: Graph[String, Int] = buildGraph(arrayMsg)
 
@@ -38,7 +39,8 @@ object GraphAnalyse {
       implicit val formats: AnyRef with Formats = Serialization.formats(NoTypeHints)
       arrayMsg.map(_._1).foreach(uid => {
         val sortedRelativeUser: Array[UserRelative] = getSortedRelativeUsers(uid, graph)
-        HbaseUtil.insertRow(HbaseAttribute.relativeUsersTableName, uid, HbaseAttribute.columnFamilyOfRelativeUsers, HbaseAttribute.columnOfRelativeUsers, write(sortedRelativeUser))
+        HbaseUtil.insertRow(HbaseAttribute.relativeUsersTableName, uid,
+          HbaseAttribute.columnFamilyOfRelativeUsers, HbaseAttribute.columnOfRelativeUsers, write(sortedRelativeUser))
       })
     }
   }
@@ -60,7 +62,7 @@ object GraphAnalyse {
     val vertexs = ArrayBuffer[(VertexId, String)]()
     val edges = ArrayBuffer[Edge[Int]]()
     //((uid, (Array[(cid, score)]), index)
-   arrayMsg.zipWithIndex.foreach(e => {
+    arrayMsg.zipWithIndex.foreach(e => {
       vertexs.append((e._2, e._1._1))
       e._1._2.foreach(
         cidAndScore => {
@@ -68,8 +70,6 @@ object GraphAnalyse {
           edges.append(Edge(e._2, cidToVidMap(cidAndScore._1), cidAndScore._2))
         }
       )
-      // vertexs.append((e._2+maxSize, e._1._2))
-      // edges.append(Edge(e._2, e._2+maxSize, e._1._3))
     })
     edges.foreach(e => printf(s"edges: ${e.srcId} -> ${e.dstId}  val: ${e.attr} "))
     val usersAndCartoons: RDD[(VertexId, String)] = sc.parallelize(vertexs)
@@ -88,7 +88,8 @@ object GraphAnalyse {
   }
 
   def getSortedRelativeUsers(uid: String, graph: Graph[String, Int]): Array[UserRelative] = {
-    val cartoonsSeenIdAndRate: Array[(VertexId, Int)] = graph.triplets.filter(t => t.srcAttr==uid).map(t => (t.dstId, t.attr)).collect()
+    val cartoonsSeenIdAndRate: Array[(VertexId, Int)] = graph.triplets
+      .filter(t => t.srcAttr==uid).map(t => (t.dstId, t.attr)).collect()
     val cartoonsSeenIds: Array[VertexId] = cartoonsSeenIdAndRate.map(_._1)
     val subg = graph.subgraph(epred = edge => cartoonsSeenIds.contains(edge.dstId))
     //[vid, (String, Int)]
